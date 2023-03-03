@@ -20,6 +20,6 @@ struct ProfilePicture: View {
 
 struct ProfilePicture_Previews: PreviewProvider {
     static var previews: some View {
-        ProfilePicture(image: Image("ProfileImage1"))
+        ProfilePicture(image: Image("John_profile"))
     }
 }

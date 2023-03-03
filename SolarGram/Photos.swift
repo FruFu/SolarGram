@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Photos: View {
+    let screenSize: CGRect = UIScreen.main.bounds
     
     var image: Image
     
@@ -21,7 +22,7 @@ struct Photos: View {
         image
             .resizable()
             .aspectRatio(contentMode: .fill)
-            .frame(width: 500, height: 500)
+            .frame(width: screenSize.width, height: screenSize.width)
             .clipShape(Rectangle())
         
         
@@ -31,6 +32,6 @@ struct Photos: View {
 
 struct Photos_Previews: PreviewProvider {
     static var previews: some View {
-        Photos(image: Image("image1"))
+        Photos(image: Image("John_2"))
     }
 }

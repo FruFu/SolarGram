@@ -8,27 +8,36 @@
 import SwiftUI
 
 struct Post: View {
+    var user: [Profile] = [Profile(id: 1, name: "Edward", text:"testing"),
+                           Profile(id: 2, name: "John", text:"testing"),
+                           Profile(id: 3, name: "Edward", text:"testing"),
+                           Profile(id: 4, name: "Edward", text:"testing"),
+                           Profile(id: 5, name: "John", text:"testing"),
+                           Profile(id: 6, name: "John", text:"testing"),
+                           Profile(id: 7, name: "Edward", text:"testing"),
+                           Profile(id: 8, name: "Edward", text:"testing"),
+                           Profile(id: 9, name: "Edward", text:"testing")]
+    
     var body: some View {
-        VStack {
-            HStack{
-                ProfilePicture(image: Image("ProfileImage1"))
-                    .frame(width: 50, height: 50)
-                    
-                    
-                Text("demo")
-                    
-                Spacer()
-            }.font(.title2)
-                .padding([.leading],10)
-            Photos(image: Image("image1"))
-            Text("some text here")
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .border(.brown)
-                .padding([.leading,.trailing],10)
-            
+        profileList
+    }
+    
+    var profileList: some View {
+        List{
+            ForEach(user) {profile in
+                PhotosView(profile: profile)
+                    .listRowSeparator(.hidden)
+            }
             
         }
+        .listStyle(PlainListStyle())
     }
+}
+
+struct Profile: Identifiable {
+    var id: Int
+    var name: String
+    var text: String
 }
 
 struct Post_Previews: PreviewProvider {

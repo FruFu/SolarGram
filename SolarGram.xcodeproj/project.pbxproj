@@ -64,11 +64,11 @@
 			children = (
 				CAD1EFF629ADC0EA00D4B693 /* SolarGramApp.swift */,
 				CAD1EFF829ADC0EA00D4B693 /* ContentView.swift */,
-				CAD1F00529AF3D8600D4B693 /* PhotosView.swift */,
 				CAD1F00B29B0491600D4B693 /* Post.swift */,
 				CAD1F00929B045C400D4B693 /* Photos.swift */,
-				CAD1F00729AF3DA200D4B693 /* ProfileView.swift */,
+				CAD1F00529AF3D8600D4B693 /* PhotosView.swift */,
 				CAD1F00D29B051B700D4B693 /* ProfilePicture.swift */,
+				CAD1F00729AF3DA200D4B693 /* ProfileView.swift */,
 				CAD1EFFA29ADC0EB00D4B693 /* Assets.xcassets */,
 				CAD1EFFC29ADC0EB00D4B693 /* SolarGram.entitlements */,
 				CAD1EFFD29ADC0EB00D4B693 /* Preview Content */,

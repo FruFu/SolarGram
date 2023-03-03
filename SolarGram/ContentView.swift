@@ -10,8 +10,16 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView{
-            PhotosView()
-                .frame(width: 400)
+            Post()
+                .tabItem {
+                    Image(systemName: "photo")
+                    Text("Photos")
+                }
+            ProfileView()
+                .tabItem {
+                    Image(systemName: "person.crop.circle")
+                    Text("Profile")
+                }
             
         }
     }
