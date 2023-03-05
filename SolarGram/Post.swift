@@ -26,7 +26,6 @@ struct Post: View {
         List{
             ForEach(user) {profile in
                 PhotosView(profile: profile)
-                    .listRowSeparator(.hidden)
             }
             
         }
