@@ -10,6 +10,7 @@ import SwiftUI
 struct ProfilePicture: View {
     var image: Image
     var body: some View {
+        //create the profile image and crop it to a circle
         image
             .resizable()
             .aspectRatio(contentMode: .fill)

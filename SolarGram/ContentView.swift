@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        //create the view at the bottom to switch screens
         TabView{
             Post()
                 .tabItem {

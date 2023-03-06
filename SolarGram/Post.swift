@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Post: View {
+    //declare structures
     var user: [Profile] = [Profile(id: 1, name: "Edward", text:"testing"),
                            Profile(id: 2, name: "John", text:"testing"),
                            Profile(id: 3, name: "Edward", text:"testing"),
@@ -18,19 +19,21 @@ struct Post: View {
                            Profile(id: 8, name: "Edward", text:"testing"),
                            Profile(id: 9, name: "Edward", text:"testing")]
     
+    //call profilelist
     var body: some View {
         profileList
     }
     
+    //profile list will call each user and run everything in photosview
     var profileList: some View {
         List{
             ForEach(user) {profile in
                 PhotosView(profile: profile)
-                    .listRowInsets(EdgeInsets())
+                    .listRowInsets(EdgeInsets())//expand list all the way
             }
             
         }
-        .listStyle(PlainListStyle())
+        .listStyle(PlainListStyle()) //ignore list constrains on the side
     }
 }
 
