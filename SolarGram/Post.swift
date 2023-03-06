@@ -26,6 +26,7 @@ struct Post: View {
         List{
             ForEach(user) {profile in
                 PhotosView(profile: profile)
+                    .listRowInsets(EdgeInsets())
             }
             
         }
@@ -44,3 +45,5 @@ struct Post_Previews: PreviewProvider {
         Post()
     }
 }
+
+

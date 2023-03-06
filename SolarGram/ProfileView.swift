@@ -24,18 +24,19 @@ struct ProfileView: View {
                 .frame(width: 150, height: 150)
             Text("Edward").font(.title)
             ScrollView {
-                LazyVGrid(columns: columns, spacing: 10) {
+                LazyVGrid(columns: columns, spacing: 5) {
                     ForEach(userPost) {profile in
                         if profile.name == "Edward"{
                             GeometryReader { gr in
-                                Photos(image: Image("\(profile.name)_\(profile.id)"))
-
-                                            .scaledToFill()
-                                            .frame(height: gr.size.width)
-                                    }
+                                Image("\(profile.name)_\(profile.id)")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(minWidth: 0, maxWidth: .infinity)
+                                    .aspectRatio(1, contentMode: .fill)
                                     .clipped()
-                                    .aspectRatio(1, contentMode: .fit)
-                            
+                                    
+                                
+                            }
                         }
 
 

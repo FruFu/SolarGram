@@ -11,7 +11,6 @@ import SwiftUI
 
 struct PhotosView: View {
     @State private var isLiked = false
-    let screenSize: CGRect = UIScreen.main.bounds
     
     var profile: Profile
     
@@ -20,6 +19,7 @@ struct PhotosView: View {
             HStack{
                 ProfilePicture(image: Image("\(profile.name)_profile"))
                     .frame(width: 50, height: 50)
+                    .padding(.top)
                     
                     
                 Text("\(profile.name)")
@@ -27,16 +27,22 @@ struct PhotosView: View {
                 Spacer()
             }.font(.title2)
                 
-            Photos(image: Image("\(profile.name)_\(profile.id)"))
-                .image.resizable()
-                .frame(width: screenSize.width, height: screenSize.width)
+            Image("\(profile.name)_\(profile.id)")
+                .resizable()
+                .scaledToFill()
+                .frame(minWidth: 0, maxWidth: .infinity)
+                .aspectRatio(1, contentMode: .fill)
+                .clipped()
+                
+                
             Text("\(profile.text)")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading)
             
-            HearButton(isLiked: $isLiked)
+            HeartButton(isLiked: $isLiked)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading)
+                .padding(.bottom)
             
         
             
@@ -44,7 +50,7 @@ struct PhotosView: View {
     }
 }
 
-struct HearButton:View{
+struct HeartButton:View{
     @Binding var isLiked:Bool
     var body: some View{
         Button(action:{
