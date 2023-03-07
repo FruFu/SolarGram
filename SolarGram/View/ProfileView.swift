@@ -49,14 +49,6 @@ struct ProfileView: View {
                     }.clipped()
                     .aspectRatio(1, contentMode: .fit)
 
-//                    Photos(image: Image("John_2"))
-//                        .frame(width: screenSize.width/3, height: screenSize.width/3)
-//
-//                    Photos(image: Image("John_2"))
-//                        .frame(width: screenSize.width/3, height: screenSize.width/3)
-//                    Photos(image: Image("John_2"))
-//                        .frame(width: screenSize.width/3, height: screenSize.width/3)
-
                 }.padding(.horizontal)
             }
         }

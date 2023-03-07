@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CAC1246929B802DA00E86332 /* SolarGramManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1246829B802DA00E86332 /* SolarGramManager.swift */; };
+		CAC1246B29B805D600E86332 /* SolarGramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC1246A29B805D600E86332 /* SolarGramViewModel.swift */; };
 		CAD1EFF729ADC0EA00D4B693 /* SolarGramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1EFF629ADC0EA00D4B693 /* SolarGramApp.swift */; };
 		CAD1EFF929ADC0EA00D4B693 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1EFF829ADC0EA00D4B693 /* ContentView.swift */; };
 		CAD1EFFB29ADC0EB00D4B693 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD1EFFA29ADC0EB00D4B693 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CAC1246829B802DA00E86332 /* SolarGramManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarGramManager.swift; sourceTree = "<group>"; };
+		CAC1246A29B805D600E86332 /* SolarGramViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarGramViewModel.swift; sourceTree = "<group>"; };
 		CAD1EFF329ADC0EA00D4B693 /* SolarGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SolarGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD1EFF629ADC0EA00D4B693 /* SolarGramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarGramApp.swift; sourceTree = "<group>"; };
 		CAD1EFF829ADC0EA00D4B693 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +45,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CAC1246529B7D66200E86332 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CAD1EFF629ADC0EA00D4B693 /* SolarGramApp.swift */,
+				CAD1EFF829ADC0EA00D4B693 /* ContentView.swift */,
+				CAD1F00729AF3DA200D4B693 /* ProfileView.swift */,
+				CAD1F00B29B0491600D4B693 /* Post.swift */,
+				CAD1F00D29B051B700D4B693 /* ProfilePicture.swift */,
+				CAD1F00529AF3D8600D4B693 /* PhotosView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CAC1246629B7D66B00E86332 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CAC1246A29B805D600E86332 /* SolarGramViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CAC1246729B7D67600E86332 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CAC1246829B802DA00E86332 /* SolarGramManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		CAD1EFEA29ADC0EA00D4B693 = {
 			isa = PBXGroup;
 			children = (
@@ -60,13 +93,10 @@
 		CAD1EFF529ADC0EA00D4B693 /* SolarGram */ = {
 			isa = PBXGroup;
 			children = (
-				CAD1EFF629ADC0EA00D4B693 /* SolarGramApp.swift */,
-				CAD1EFF829ADC0EA00D4B693 /* ContentView.swift */,
-				CAD1F00B29B0491600D4B693 /* Post.swift */,
-				CAD1F00529AF3D8600D4B693 /* PhotosView.swift */,
-				CAD1F00D29B051B700D4B693 /* ProfilePicture.swift */,
-				CAD1F00729AF3DA200D4B693 /* ProfileView.swift */,
+				CAC1246529B7D66200E86332 /* View */,
+				CAC1246629B7D66B00E86332 /* ViewModel */,
 				CAD1EFFA29ADC0EB00D4B693 /* Assets.xcassets */,
+				CAC1246729B7D67600E86332 /* Model */,
 				CAD1EFFC29ADC0EB00D4B693 /* SolarGram.entitlements */,
 				CAD1EFFD29ADC0EB00D4B693 /* Preview Content */,
 			);
@@ -155,8 +185,10 @@
 				CAD1EFF929ADC0EA00D4B693 /* ContentView.swift in Sources */,
 				CAD1EFF729ADC0EA00D4B693 /* SolarGramApp.swift in Sources */,
 				CAD1F00C29B0491600D4B693 /* Post.swift in Sources */,
+				CAC1246929B802DA00E86332 /* SolarGramManager.swift in Sources */,
 				CAD1F00629AF3D8600D4B693 /* PhotosView.swift in Sources */,
 				CAD1F00E29B051B700D4B693 /* ProfilePicture.swift in Sources */,
+				CAC1246B29B805D600E86332 /* SolarGramViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

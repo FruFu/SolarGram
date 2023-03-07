@@ -8,15 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var viewModel = SolarGramViewModel()
+    
     var body: some View {
         //create the view at the bottom to switch screens
-        TabView{
+        TabView(){
             Post()
+                .environmentObject(viewModel)
                 .tabItem {
                     Image(systemName: "photo")
                     Text("Photos")
                 }
             ProfileView()
+                .environmentObject(viewModel)
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     Text("Profile")
