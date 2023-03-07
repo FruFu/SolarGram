@@ -32,12 +32,27 @@ struct PhotosView: View {
             }.font(.title2)
                 
             //call the image and make it in to a square
-            Image("\(profile.name)_\(profile.id)")
-                .resizable()
-                .scaledToFill()
-                .frame(minWidth: 0, maxWidth: .infinity)
+            Rectangle()
                 .aspectRatio(1, contentMode: .fill)
+                .scaledToFit()
+                .overlay(
+                    Image("\(profile.name)_\(profile.id)")
+                        .resizable()
+                        .scaledToFill()
+                        
+                )
                 .clipped()
+                
+            
+            
+               
+            
+            
+//            Image("\(profile.name)_\(profile.id)")
+//                .resizable()
+//                .frame(minWidth: 0, maxWidth: .infinity)
+//                .aspectRatio(1, contentMode: .fill)
+//                .clipped()
                 
             //create the text for the image
             Text("\(profile.text)")
