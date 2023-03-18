@@ -8,19 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var selection: Tab = .photos
+    
+    enum Tab {
+           case photos
+           case profile
+       }
+    
     var body: some View {
-        //create the view at the bottom to switch screens
-        TabView{
-            Post()
+        TabView(selection: $selection) {
+            PhotoList()
                 .tabItem {
-                    Image(systemName: "photo")
-                    Text("Photos")
+                    Label("Photos", systemImage: "photo.stack")
                 }
+                .tag(Tab.photos)
             ProfileView()
                 .tabItem {
-                    Image(systemName: "person.crop.circle")
-                    Text("Profile")
+                    Label("Profile", systemImage: "person.crop.circle")
                 }
+                .tag(Tab.profile)
             
         }
     }
