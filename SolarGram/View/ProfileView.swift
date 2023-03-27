@@ -8,25 +8,27 @@
 import SwiftUI
 
 struct ProfileView: View {
-        
-    let posts = PublicPosts.sampleData.filter { post in
-        post.author.id == PublicPosts.currentUser.id
-    }
+    @EnvironmentObject var viewModel: SolarGramPostsViewModel
+    
+//    let posts = viewModel.SolarGramPosts.filter { post in
+//        post.author.id == PublicPosts.currentUser.id
+//    }
+    
     
     private let headerHeight: CGFloat = 120
     
     var body: some View {
         VStack {
             headerView
-            GridPhotoView(posts: posts)
+            GridPhotoView(posts: viewModel.currentUserPosts)
         }
     }
     
     var headerView: some View {
         VStack {
-            SquareImage(Image(PublicPosts.currentUser.photoID))
+            SquareImage(Image(viewModel.currentUserInfoPhotoID))
                 .clipShape(Circle())
-            Text(PublicPosts.currentUser.name)
+            Text(viewModel.currentUserInfoName)
                 .font(.title)
         }
         .frame(height: headerHeight)
@@ -36,6 +38,6 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView().environmentObject(SolarGramPostsViewModel())
     }
 }

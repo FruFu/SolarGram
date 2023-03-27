@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA2CFBF829CBF13400041C63 /* CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CFBF729CBF13400041C63 /* CameraPicker.swift */; };
+		CA2CFBFA29CBF1C000041C63 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2CFBF929CBF1C000041C63 /* ImagePicker.swift */; };
 		CA348D8C29C534AB00EA0E2F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA348D8B29C534AB00EA0E2F /* ProfileView.swift */; };
 		CA348D8E29C534C500EA0E2F /* GridPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA348D8D29C534C500EA0E2F /* GridPhotoView.swift */; };
 		CA348D9029C534D600EA0E2F /* PhotoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA348D8F29C534D600EA0E2F /* PhotoList.swift */; };
@@ -15,6 +17,7 @@
 		CA348D9629C5351300EA0E2F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA348D9529C5351300EA0E2F /* Post.swift */; };
 		CA348D9829C5351C00EA0E2F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA348D9729C5351C00EA0E2F /* User.swift */; };
 		CA348D9A29C5352400EA0E2F /* PublicPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA348D9929C5352400EA0E2F /* PublicPosts.swift */; };
+		CA348DA029C646C000EA0E2F /* SolarGramPostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA348D9F29C646C000EA0E2F /* SolarGramPostsViewModel.swift */; };
 		CAD1EFF729ADC0EA00D4B693 /* SolarGramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1EFF629ADC0EA00D4B693 /* SolarGramApp.swift */; };
 		CAD1EFF929ADC0EA00D4B693 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1EFF829ADC0EA00D4B693 /* ContentView.swift */; };
 		CAD1EFFB29ADC0EB00D4B693 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD1EFFA29ADC0EB00D4B693 /* Assets.xcassets */; };
@@ -22,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA2CFBF729CBF13400041C63 /* CameraPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPicker.swift; sourceTree = "<group>"; };
+		CA2CFBF929CBF1C000041C63 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		CA348D8B29C534AB00EA0E2F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		CA348D8D29C534C500EA0E2F /* GridPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridPhotoView.swift; sourceTree = "<group>"; };
 		CA348D8F29C534D600EA0E2F /* PhotoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoList.swift; sourceTree = "<group>"; };
@@ -30,6 +35,7 @@
 		CA348D9529C5351300EA0E2F /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		CA348D9729C5351C00EA0E2F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CA348D9929C5352400EA0E2F /* PublicPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicPosts.swift; sourceTree = "<group>"; };
+		CA348D9F29C646C000EA0E2F /* SolarGramPostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarGramPostsViewModel.swift; sourceTree = "<group>"; };
 		CAD1EFF329ADC0EA00D4B693 /* SolarGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SolarGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD1EFF629ADC0EA00D4B693 /* SolarGramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarGramApp.swift; sourceTree = "<group>"; };
 		CAD1EFF829ADC0EA00D4B693 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +55,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA348D9B29C645F600EA0E2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CA348D9529C5351300EA0E2F /* Post.swift */,
+				CA348D9729C5351C00EA0E2F /* User.swift */,
+				CA348D9929C5352400EA0E2F /* PublicPosts.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CA348D9C29C6462700EA0E2F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CAD1EFF829ADC0EA00D4B693 /* ContentView.swift */,
+				CA348D8B29C534AB00EA0E2F /* ProfileView.swift */,
+				CA348D8D29C534C500EA0E2F /* GridPhotoView.swift */,
+				CA348D9D29C6464100EA0E2F /* Helpers */,
+				CA2CFBF729CBF13400041C63 /* CameraPicker.swift */,
+				CA2CFBF929CBF1C000041C63 /* ImagePicker.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CA348D9D29C6464100EA0E2F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CA348D8F29C534D600EA0E2F /* PhotoList.swift */,
+				CA348D9129C534E800EA0E2F /* PhotoRow.swift */,
+				CA348D9329C534F300EA0E2F /* SquareImage.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CA348D9E29C6469800EA0E2F /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				CA348D9F29C646C000EA0E2F /* SolarGramPostsViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		CAD1EFEA29ADC0EA00D4B693 = {
 			isa = PBXGroup;
 			children = (
@@ -69,15 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				CAD1EFF629ADC0EA00D4B693 /* SolarGramApp.swift */,
-				CAD1EFF829ADC0EA00D4B693 /* ContentView.swift */,
-				CA348D8B29C534AB00EA0E2F /* ProfileView.swift */,
-				CA348D8D29C534C500EA0E2F /* GridPhotoView.swift */,
-				CA348D8F29C534D600EA0E2F /* PhotoList.swift */,
-				CA348D9129C534E800EA0E2F /* PhotoRow.swift */,
-				CA348D9329C534F300EA0E2F /* SquareImage.swift */,
-				CA348D9529C5351300EA0E2F /* Post.swift */,
-				CA348D9729C5351C00EA0E2F /* User.swift */,
-				CA348D9929C5352400EA0E2F /* PublicPosts.swift */,
+				CA348D9C29C6462700EA0E2F /* View */,
+				CA348D9E29C6469800EA0E2F /* View Model */,
+				CA348D9B29C645F600EA0E2F /* Model */,
 				CAD1EFFA29ADC0EB00D4B693 /* Assets.xcassets */,
 				CAD1EFFC29ADC0EB00D4B693 /* SolarGram.entitlements */,
 				CAD1EFFD29ADC0EB00D4B693 /* Preview Content */,
@@ -163,12 +204,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA2CFBFA29CBF1C000041C63 /* ImagePicker.swift in Sources */,
 				CA348D9429C534F300EA0E2F /* SquareImage.swift in Sources */,
 				CAD1EFF929ADC0EA00D4B693 /* ContentView.swift in Sources */,
 				CA348D9029C534D600EA0E2F /* PhotoList.swift in Sources */,
 				CA348D9629C5351300EA0E2F /* Post.swift in Sources */,
+				CA2CFBF829CBF13400041C63 /* CameraPicker.swift in Sources */,
 				CA348D9A29C5352400EA0E2F /* PublicPosts.swift in Sources */,
 				CA348D8E29C534C500EA0E2F /* GridPhotoView.swift in Sources */,
+				CA348DA029C646C000EA0E2F /* SolarGramPostsViewModel.swift in Sources */,
 				CA348D9829C5351C00EA0E2F /* User.swift in Sources */,
 				CA348D9229C534E800EA0E2F /* PhotoRow.swift in Sources */,
 				CA348D8C29C534AB00EA0E2F /* ProfileView.swift in Sources */,
@@ -301,6 +345,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need Camera access to upload";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Need Library Usage";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -311,7 +357,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
@@ -339,6 +385,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need Camera access to upload";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Need Library Usage";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -349,7 +397,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;

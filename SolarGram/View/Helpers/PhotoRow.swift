@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct PhotoRow: View {
-    
-    @Binding var post: Post
+    @EnvironmentObject var viewModel: SolarGramPostsViewModel
+    var post: Post
     
     private let authorImageHeight: CGFloat = 30
     
     var body: some View {
         VStack(alignment: .leading) {
             authorView
-            SquareImage(Image(post.photoID))
+            SquareImage(Image(uiImage: post.image!))
             descriptionView
             actionView
             #if os(macOS)
@@ -33,6 +33,16 @@ struct PhotoRow: View {
                 .clipShape(Circle())
             Text(post.author.name)
                 .font(.headline)
+            Spacer()
+
+            Button {
+                print("delete button pressed")
+                viewModel.removePostFrom(post)
+            } label: {
+                Image(systemName: "trash")
+            }
+            .padding(.trailing, 8)
+            .buttonStyle(.plain)
         }
         .padding(.leading, 8)
     }
@@ -40,14 +50,15 @@ struct PhotoRow: View {
     var actionView: some View {
         HStack {
             Button {
-                post.isFavorite.toggle()
+                viewModel.isFavorite(post)
             } label: {
                 if post.isFavorite {
                     Image(systemName: "heart.fill")
                 } else {
                     Image(systemName: "heart")
                 }
-            }
+            }.buttonStyle(.plain)
+            
         }
         .padding(.leading, 8)
     }
@@ -63,7 +74,8 @@ struct PhotoRow: View {
 
 struct PhotoRow_Previews: PreviewProvider {
     static var previews: some View {
-        PhotoRow(post: .constant(PublicPosts.sampleData[1]))
+        let test1 =  Post(photoID: "photo1", description: "Something really great", author: PublicPosts.currentUser,image: UIImage(named: "photo1"))
+        PhotoRow(post: test1)
     }
 }
 

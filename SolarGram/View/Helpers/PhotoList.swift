@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct PhotoList: View {
-    @State var feed: [Post] = PublicPosts.sampleData
+    @EnvironmentObject var viewModel: SolarGramPostsViewModel
+    
+//    @State var feed: [Post] = $viewModel.PublicPosts.sampleData
     
     var body: some View {
-        List($feed) { post in
+        List(viewModel.SolarGramPosts.reversed()) { post in
             PhotoRow(post: post)
                 .listRowInsets(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
         }

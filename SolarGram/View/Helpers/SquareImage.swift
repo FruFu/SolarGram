@@ -41,6 +41,6 @@ struct SquareImage: View {
 
 struct SquareImage_Previews: PreviewProvider {
     static var previews: some View {
-        SquareImage(Image("joe"))
+        SquareImage(Image("edward"))
     }
 }
