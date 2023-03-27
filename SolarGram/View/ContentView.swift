@@ -10,8 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var viewModel = SolarGramPostsViewModel()
     @State private var selection: Tab = .photos
-    @State private var showImagePicker = false
-    @State private var showCameraPicker = false
+
     
     enum Tab {
            case photos
@@ -20,26 +19,12 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView{
+            
             VStack{
-                HStack{
-                    Button {
-                        self.showCameraPicker = true
-                    } label: {
-                        Image(systemName: "camera")
-                    }
-                    .sheet(isPresented: $showCameraPicker) {
-                            CameraPicker(viewModel: viewModel)
-                    }
-                    Button {
-                        self.showImagePicker = true
-                    } label: {
-                        Image(systemName: "photo")
-                    }
-                    .sheet(isPresented: $showImagePicker) {
-                        ImagePicker(viewModel: viewModel)
-                        
-                    }
-                }
+                
+
+                
+
                 
                 TabView(selection: $selection) {
                     PhotoList()

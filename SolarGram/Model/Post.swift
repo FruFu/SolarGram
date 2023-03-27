@@ -11,7 +11,6 @@ import SwiftUI
 
 struct Post: Identifiable {
     let id: UUID = UUID()
-    let photoID: String
     let description: String
     var isFavorite: Bool = false
     let author: User

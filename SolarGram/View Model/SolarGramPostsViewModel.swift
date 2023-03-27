@@ -41,7 +41,7 @@ class SolarGramPostsViewModel: ObservableObject {
         // you must do this on main thread for UI to update properly
         DispatchQueue.main.async {
             // create a new post object, it might look like this, but you can adapt as needed in your project.
-            let newPost = Post(photoID: UUID().uuidString, description: "Something New", isFavorite: false, author: PublicPosts.currentUser, image: UIImage(named: "photo1"))
+            let newPost = Post(description: "Something New", isFavorite: false, author: PublicPosts.currentUser, image: UIImage(named: "photo1"))
 
             // call some function on the model to add the new post to the array of posts, you can do this how you like, but the logic should be in the model
             self.model.add(newPost, image: image)

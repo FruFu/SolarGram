@@ -39,7 +39,10 @@ struct PhotoRow: View {
                 print("delete button pressed")
                 viewModel.removePostFrom(post)
             } label: {
-                Image(systemName: "trash")
+                if post.author.id == PublicPosts.currentUser.id{
+                    Image(systemName: "trash")
+                }
+                    
             }
             .padding(.trailing, 8)
             .buttonStyle(.plain)
@@ -74,7 +77,7 @@ struct PhotoRow: View {
 
 struct PhotoRow_Previews: PreviewProvider {
     static var previews: some View {
-        let test1 =  Post(photoID: "photo1", description: "Something really great", author: PublicPosts.currentUser,image: UIImage(named: "photo1"))
+        let test1 =  Post( description: "Something really great", author: PublicPosts.currentUser,image: UIImage(named: "photo1"))
         PhotoRow(post: test1)
     }
 }
