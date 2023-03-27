@@ -24,6 +24,7 @@ struct SquareImage: View {
                     .scaledToFill()
             }
             .clipped()
+            .contentShape(Rectangle())
         
         // MARK: other approach with ZStack shown for demonstration
         //        ZStack {
